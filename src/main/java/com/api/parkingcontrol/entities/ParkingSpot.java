@@ -20,13 +20,13 @@ public class ParkingSpot implements Serializable {
     private String parkingSpotNumber;
     @Column(nullable = false, unique = true, length = 7)
     private String licensePlateCar;
-    @Column(nullable = false, unique = true, length = 70)
+    @Column(nullable = false, length = 70)
     private String brandCar;
-    @Column(nullable = false, unique = true, length = 70)
+    @Column(nullable = false, length = 70)
     private String modelCar;
-    @Column(nullable = false, unique = true, length = 70)
+    @Column(nullable = false, length = 70)
     private String colorCar;
-    @Column(nullable = false, unique = true, length = 70)
+    @Column(nullable = false, length = 70)
     private LocalDateTime registrationDate;
     @Column(nullable = false, length = 130)
     private String owner;

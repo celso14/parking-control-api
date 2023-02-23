@@ -3,9 +3,12 @@ package com.api.parkingcontrol.dtos;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 
-import java.time.LocalDateTime;
+import java.io.Serial;
+import java.io.Serializable;
 
-public class ParkingSpotDto {
+public class ParkingSpotDto implements Serializable {
+    @Serial
+    private static final long serialVersionUID = 1L;
 
     @NotBlank
     private String parkingSpotNumber;
@@ -18,8 +21,6 @@ public class ParkingSpotDto {
     private String modelCar;
     @NotBlank
     private String colorCar;
-    @NotBlank
-    private LocalDateTime registrationDate;
     @NotBlank
     private String owner;
     @NotBlank
@@ -65,14 +66,6 @@ public class ParkingSpotDto {
 
     public void setColorCar(String colorCar) {
         this.colorCar = colorCar;
-    }
-
-    public LocalDateTime getRegistrationDate() {
-        return registrationDate;
-    }
-
-    public void setRegistrationDate(LocalDateTime registrationDate) {
-        this.registrationDate = registrationDate;
     }
 
     public String getOwner() {
