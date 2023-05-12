@@ -26,7 +26,7 @@ public class ParkingSpotService {
         return repository.findById(id);
     }
 
-    @Transactional //Garante o rollback -> alteração e deleção
+    @Transactional //Garante o rollback -> alteração e deleção push
     public ParkingSpot save(ParkingSpot parkingSpotEntity) {
         return this.repository.save(parkingSpotEntity);
     }
